@@ -19,17 +19,13 @@ A modern **Complaint Management System** built using **React** for the frontend 
 ## Screenshots
 
 ### Login Page
-![Login Page](./Screenshot%202026-01-03%20114104.png)
-
----
+![Login Page](screenshots/login.png)
 
 ### User Dashboard
-![User Dashboard](./Screenshot%202026-01-03%20114010.png)
-
----
+![User Dashboard](screenshots/user-dashboard.png)
 
 ### Admin Dashboard
-![Admin Dashboard](./Screenshot%202026-01-03%20113945.png)
+![Admin Dashboard](screenshots/admin-dashboard.png)
 
 ---
 
