@@ -92,7 +92,7 @@ Navigate to the `complaint-frontend` folder.
 
 Install dependencies:
 
-```bash
+
 npm install
 ## ✅ Project Status
 
@@ -104,7 +104,7 @@ npm install
 
 ---
 
-## 👤 Author
+### 👤 Author
 
 Developed by **Dadu**  
 Full-Stack Developer specializing in **Java Spring Boot** and **React**
