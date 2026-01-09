@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+.page {
+    min-height: 100vh;
+    background: radial-gradient(circle at top, #0f2a44, #020617);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-card {
+    width: 90%;
+    max-width: 1200px;
+    height: 650px;
+    background: linear-gradient(135deg, #071a2f, #020617);
+    border-radius: 25px;
+    display: flex;
+    overflow: hidden;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+}
+
+/* LEFT PANEL */
+.left-panel {
+    flex: 1;
+    position: relative;
+    padding: 80px;
+    background: linear-gradient(135deg, #020617, #020617);
+    overflow: hidden;
+    color: #ffffff;
+}
+
+/* SOFT LIGHT EFFECT */
+.light-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+            linear-gradient(
+                    120deg,
+                    rgba(56, 189, 248, 0.15),
+                    rgba(2, 6, 23, 0.85) 60%
+            );
+}
+
+/* TEXT */
+.left-text {
+    position: relative;
+    z-index: 2;
+}
+
+.left-text h1 {
+    font-size: 56px;
+    font-weight: 700;
+}
+
+.left-text h1 span {
+    color: #38bdf8;
+}
+
+.left-text p {
+    margin-top: 14px;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #cbd5f5;
+}
+.error-text {
+    color: #ff4d4f;
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+
+/* RIGHT PANEL */
+.right-panel {
+    flex: 1;
+    padding: 80px 70px;
+    color: #fff;
+    background: #020617;
+}
+
+.right-panel h2 {
+    margin-bottom: 50px;
+    font-size: 28px;
+    font-weight: 500;
+}
+
+.right-panel h2 span {
+    color: #38bdf8;
+}
+
+/* INPUTS */
+.input-box {
+    background: #020617;
+    border: 1px solid #1e293b;
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin-bottom: 25px;
+}
+
+.input-box input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    width: 100%;
+    font-size: 16px;
+}
+
+.input-box input::placeholder {
+    color: #94a3b8;
+}
+
+/* BUTTON */
+button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    background: linear-gradient(90deg, #38bdf8, #2563eb);
+    color: #fff;
+    margin-top: 10px;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+/* TEXT LINKS */
+.forgot {
+    margin-top: 25px;
+    color: #94a3b8;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.signup {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #94a3b8;
+}
+
+.signup span {
+    color: #38bdf8;
+    cursor: pointer;
+}
