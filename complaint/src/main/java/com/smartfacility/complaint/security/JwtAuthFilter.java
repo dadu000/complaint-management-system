@@ -11,6 +11,9 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.web.authentication.WebAuthenticationDetailsSource;
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import java.util.List;
+
 
 import java.io.IOException;
 import java.util.Collections;
@@ -45,20 +48,23 @@ public class JwtAuthFilter extends OncePerRequestFilter {
                         .getBody();
 
                 String email = claims.getSubject();
+                String role = claims.get("role", String.class);
+
+                var authority = new SimpleGrantedAuthority("ROLE_" + role);
 
                 UsernamePasswordAuthenticationToken authentication =
                         new UsernamePasswordAuthenticationToken(
                                 email,
                                 null,
-                                Collections.emptyList()
+                                List.of(authority)
                         );
 
                 authentication.setDetails(
                         new WebAuthenticationDetailsSource().buildDetails(request)
                 );
 
-                SecurityContextHolder.getContext()
-                        .setAuthentication(authentication);
+                SecurityContextHolder.getContext().setAuthentication(authentication);
+
 
             } catch (Exception e) {
                 // Invalid token → ignore, Spring will block request
